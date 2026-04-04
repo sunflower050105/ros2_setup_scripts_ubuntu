@@ -23,6 +23,9 @@ on:
   schedule:
     - cron: "0 1 * * 1"
 
+env:
+  PATH: /usr/bin:/usr/sbin:/bin:/sbin:/usr/local/bin:/usr/local/sbin
+
 jobs:
   # os-check-on-ubuntu-bionic:
   #   runs-on: ubuntu-18.04

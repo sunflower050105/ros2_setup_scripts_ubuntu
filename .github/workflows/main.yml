@@ -17,6 +17,12 @@ on:
   schedule:
     - cron: "0 1 * * 1"
 
+env:
+  # Ensure the system Python (/usr/bin/python3) is used instead of
+  # the runner-managed one under /usr/local, which may lack ROS 2
+  # Python dependencies such as catkin_pkg.
+  PATH: /usr/bin:/usr/sbin:/bin:/sbin:/usr/local/bin:/usr/local/sbin
+
 jobs:
   humble:
     runs-on: ubuntu-22.04
